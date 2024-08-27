@@ -10,4 +10,11 @@ public class ClassRoom
     {
         
     }
+
+    public override string ToString()
+    {
+        var text = string.Join(",", StudentList.Where(s => s != null).Select(s => s.Name));
+        return
+            $"{nameof(ClassName)}: {ClassName}, {nameof(StudentList)}: {text}, {nameof(SemesterStart)}: {SemesterStart}";
+    }
 }

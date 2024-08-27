@@ -19,5 +19,7 @@ class Program
         {
             Console.WriteLine(s.Name);
         }
+        
+        Console.WriteLine(classRoom);
     }
 }
