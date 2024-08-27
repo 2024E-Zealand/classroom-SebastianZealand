@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq.Expressions;
+
 namespace ClassRoomNet60;
 
 public class ClassRoom
@@ -9,6 +12,16 @@ public class ClassRoom
     public ClassRoom()
     {
         
+    }
+
+    public void BirthdaysInSeason() {
+       var list = new List<string> {"Summer", "Winter", "Spring","Autumn" };
+        
+        foreach (var season in list)
+        {
+            var count = StudentList.Where(s => s.Season() == season).Count();
+            Console.WriteLine($"Number of {season} students: " + count);
+        }
     }
 
     public override string ToString()

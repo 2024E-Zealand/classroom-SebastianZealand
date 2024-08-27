@@ -23,5 +23,7 @@ class Program
         Console.WriteLine(classRoom);
 
         Console.WriteLine(mathias.Season());
+
+        classRoom.BirthdaysInSeason();
     }
 }
