@@ -2,8 +2,20 @@ namespace ClassRoomNet60;
 
 public class Student
 {
+    private int _birthMonth;
     public string Name { get; set; }
-    public int BirthMonth { get; set; }
+
+    public int BirthMonth
+    {
+        get => _birthMonth;
+        set
+        {
+            if (value < 1 || value > 12)
+            {
+                _birthMonth = value;
+            }
+        }
+    }
     public int Birthday { get; set; }
 
     public Student(string name, int birthMonth, int birthday)
